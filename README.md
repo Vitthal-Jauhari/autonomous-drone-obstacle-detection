@@ -44,6 +44,11 @@ python run.py --encoder <vits|vitb|vitl> --img-path <path_to_images> --outdir <o
 python run_video.py --encoder <vits|vitb|vitl> --video-path <path_to_video> --outdir <output_folder>
 ```
 
+6. Run obstacle detection using webcam or any other video input
+```bash
+python realtime_depth.py
+```
+
 ## Project Structure
 
 ```
