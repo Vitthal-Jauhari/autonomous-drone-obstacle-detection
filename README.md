@@ -11,6 +11,13 @@ For complete model details, usage instructions, and pre-trained checkpoints, ple
 - Simple scripts to visualize depth maps
 - Compatible with Small, Base, Large, and (future) Giant Depth-Anything-V2 models
 - GPU/CPU support
+- Obstacle detection for autonomous drone applications
+
+## Requirements
+
+- **Python 3.11** (tested and recommended)
+- PyTorch 2.0+
+- CUDA 11.7+ (for GPU support) or CPU
 
 ## Usage
 
@@ -20,7 +27,7 @@ git clone https://github.com/Vitthal-Jauhari/autonomous-drone-obstacle-detection
 cd autonomous-drone-obstacle-detection
 ```
 
-2. Install requirements:  
+2. Install requirements (tested with Python 3.11):  
 ```bash
 pip install -r requirements.txt
 ```
@@ -37,11 +44,31 @@ python run.py --encoder <vits|vitb|vitl> --img-path <path_to_images> --outdir <o
 python run_video.py --encoder <vits|vitb|vitl> --video-path <path_to_video> --outdir <output_folder>
 ```
 
+## Project Structure
+
+```
+autonomous-drone-obstacle-detection/
+├── checkpoints/          # Model weights (.pth files)
+├── models/              # ONNX models
+├── assets/              # Example images and videos
+│   └── examples_video/
+├── vis_video_depth/     # Output depth visualization
+├── run.py              # Image processing script
+├── run_video.py        # Video processing script
+└── requirements.txt    # Python dependencies
+```
+
 ## Notes
 
 - For advanced usage, model configurations, or fine-tuning, see the [parent repo](https://github.com/DepthAnything/Depth-Anything-V2).  
 - Designed to focus on **obstacle detection**, leveraging depth maps for drone or robotics applications.
+- **Tested with Python 3.11** - recommended for compatibility
+- Large model files are managed using Git LFS
 
 ## License
 
-This project inherits licenses from the original Depth-Anything-V2 repository.  
+This project inherits licenses from the original Depth-Anything-V2 repository.
+
+## Acknowledgments
+
+Based on the [Depth-Anything-V2](https://github.com/DepthAnything/Depth-Anything-V2) project.
