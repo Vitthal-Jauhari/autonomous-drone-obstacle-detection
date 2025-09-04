@@ -1,0 +1,36 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# VSCode
+.vscode/
+
+# Models & weights (big files)
+# models/*
+# checkpoints/*
+# *.pth
+# *.pt
+
+# CUDA outputs / logs
+cuda_depth_output/
+vis_output/
+video_depth_vis/
+vis_video_path/
+vis_depth_custom/
+depth_vis/
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+venv/
+.env/

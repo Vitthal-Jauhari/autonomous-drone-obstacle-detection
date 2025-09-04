@@ -181,7 +181,8 @@ class DepthAnythingV2(nn.Module):
         depth = self.depth_head(features, patch_h, patch_w)
         depth = F.relu(depth)
         
-        return depth.squeeze(1)
+        #return depth.squeeze(1)
+        return depth
     
     @torch.no_grad()
     def infer_image(self, raw_image, input_size=518):
